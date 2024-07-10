@@ -1,7 +1,7 @@
 package main
 
 import (
-	routes "github.com/shaurya019/go-jwt-project/routes"
+	routes "github.com/shaurya019/routes"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"log"

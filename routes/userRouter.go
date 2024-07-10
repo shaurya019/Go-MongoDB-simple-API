@@ -1,11 +1,12 @@
 package routes
 
-import(
+import (
 	"github.com/gin-gonic/gin"
+	controller "github.com/shaurya019/controllers"
 )
 
 func UserRoutes(incomingRoutes *gin.Engine){
-	incomingRoutes.Use()
-	incomingRoutes.GET("/users", )
-	incomingRoutes.GET("/users/:user_id", )
+	incomingRoutes.Use(middleware.Authenticate())
+	incomingRoutes.GET("/users", controller.GetUsers())
+	incomingRoutes.GET("/users/:user_id", controller.GetUser())
 }
